@@ -1,0 +1,33 @@
+<mvc:View controllerName="northwindodataqueries.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="apps">
+			<pages>
+				<Page id="page" title="OData Querying">
+					<content>
+						<List id="_IDGenList" headerText="Filter" items="{productModel>/results}">
+							<StandardListItem id="_IDGenStandardListItem1" title="{productModel>ProductName}" info="{productModel>QuantityPerUnit}" description="{productModel>UnitPrice}"/>
+						</List>
+						<List id="_IDGenList1" headerText="Order By" items="{customerModel>/results}">
+							<StandardListItem id="_IDGenStandardListItem2" title="{customerModel>CompanyName}" info="{customerModel>ContactName}" description="{customerModel>PostalCode}"/>
+						</List>
+						<List id="_IDGenList2" headerText="Select" items="{orderModel>/results}">
+							<StandardListItem id="_IDGenStandardListItem3" title="{orderModel>OrderID}" info="{orderModel>CustomerID}" description="{orderModel>Freight}"/>
+						</List>
+						<List id="_IDGenList3" headerText="Top and Skip" items="{regionModel>/results}">
+							<StandardListItem id="_IDGenStandardListItem4" title="{regionModel>RegionDescription}" info="{regionModel>RegionID}"/>
+						</List>
+						<List id="_IDGenList4" headerText="Expand" items="{expandModel>/results}">
+							<StandardListItem id="_IDGenStandardListItem5" title="{expandModel>CustomerID}" info="{expandModel>CompanyName}" description="{expandModel>Phone}"/>
+						</List>
+						<List id="_IDGenList5" headerText="Count">
+							<StandardListItem title="" id="titleCount"/>
+						</List>
+						<List id="_IDGenList6" headerText="All Query combinations" items="{allModel>/results}">
+							<StandardListItem id="_IDGenStandardListItem6" title="{allModel>ContactName}"/>
+						</List>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
